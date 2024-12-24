@@ -37,7 +37,7 @@ headers = {
     "x-t": str(x_s_t["X-t"]),
     "x-xray-traceid": "c91c"
 }
-cookies = {  # 需补充cookie，连同xs.js里面的部分也需要补充，看条件补
+cookies = {  # 需补充cookie，连同xs.js和xs-common里面的部分也需要补充，看注释补
     "abRequestId": "b58a8",
     "a1": "193e",
     "webId": "31254",
