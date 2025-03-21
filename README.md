@@ -10,3 +10,11 @@
 - **禁止**将本仓库内容用于任何非法或未经授权的活动
 
 加密参数以及算法隔段时间都在更新，不保证长期有效
+
+## 另QQ音乐获取cookie及刷新cookie算法和网易云获取cookie算法：
+
+https://github.com/ZWD11/qqmusic-wyy-qrlogin-cookie
+
+## QQ音乐官转api：
+https://github.com/ZWD11/QQmusicApi
+
