@@ -15,3 +15,6 @@
 
 https://github.com/ZWD11/qqmusic-wyy-qrlogin-cookie
 
+## QQ音乐官转api：
+https://github.com/ZWD11/QQmusicApi
+
