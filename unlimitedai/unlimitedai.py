@@ -6,16 +6,38 @@ import sys
 import os
 from datetime import datetime, timezone
 
-url = "https://app.unlimitedai.chat/?_rsc=1v2se"
+url = "https://app.unlimitedai.chat/api/token"
+
+payload = {}
+headers1 = {
+  'accept': '*/*',
+  'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'priority': 'u=1, i',
+  'referer': 'https://app.unlimitedai.chat/chat/3d4224da-551e-4d6b-a136-816878a9aafd',
+  'sec-ch-ua': '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'Cookie': '_ga=GA1.1.843752196.1744899840; sidebar:state=true; _ga_BB7FNJV4KQ=GS1.1.1745982008.8.1.1745984335.0.0.0'
+}
+
+response = requests.request("GET", url, headers=headers1, data=payload)
+api_token = response.json()['token']
+print(api_token)
+
+url = "https://app.unlimitedai.chat/?_rsc=bndow"
 
 payload = {}
 headers = {
   'accept': '*/*',
   'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-  'next-router-state-tree': '%5B%22%22%2C%7B%22children%22%3A%5B%22(chat)%22%2C%7B%22children%22%3A%5B%22chat%22%2C%7B%22children%22%3A%5B%5B%22id%22%2C%22ad4d6aac-0a4e-4ec8-a81f-68e5f103d751%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2C%22%2Fchat%2Fad4d6aac-0a4e-4ec8-a81f-68e5f103d751%22%2C%22refresh%22%5D%7D%5D%7D%5D%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D',
-  'next-url': '/chat/ad4d6aac-0a4e-4ec8-a81f-68e5f103d751',
+  'next-router-state-tree': '%5B%22%22%2C%7B%22children%22%3A%5B%22(chat)%22%2C%7B%22children%22%3A%5B%22chat%22%2C%7B%22children%22%3A%5B%5B%22id%22%2C%2287b99594-bb7c-4b94-ba08-e21c0e14b26c%22%2C%22d%22%5D%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2C%22%2Fchat%2F87b99594-bb7c-4b94-ba08-e21c0e14b26c%22%2C%22refresh%22%5D%7D%5D%7D%5D%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D',
+  'next-url': '/chat/87b99594-bb7c-4b94-ba08-e21c0e14b26c',
   'priority': 'u=1, i',
-  'referer': 'https://app.unlimitedai.chat/chat/ad4d6aac-0a4e-4ec8-a81f-68e5f103d751',
+  'referer': 'https://app.unlimitedai.chat/chat/87b99594-bb7c-4b94-ba08-e21c0e14b26c',
   'rsc': '1',
   'sec-ch-ua': '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
   'sec-ch-ua-mobile': '?0',
@@ -24,10 +46,28 @@ headers = {
   'sec-fetch-mode': 'cors',
   'sec-fetch-site': 'same-origin',
   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
-  #'Cookie': '_ga=GA1.1.843752196.1744899840; __Host-authjs.csrf-token=cc80bab8a5e697593ceb466a38f5138f91f818b012a27fdacf315cc81d016a82%7C20fc88f54084fb5d7bf7b9fcea3925211a224ec00d944eca807085cd54d0e996; __Secure-authjs.callback-url=https%3A%2F%2Fapp.unlimitedai.chat; sidebar:state=false; _ga_BB7FNJV4KQ=GS1.1.1745670711.6.1.1745671249.0.0.0'
+  'Cookie': '_ga=GA1.1.843752196.1744899840; sidebar:state=true; _ga_BB7FNJV4KQ=GS1.1.1745982008.8.1.1745984335.0.0.0'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
+
+headers2 = {
+  'accept': '*/*',
+  'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+  'content-type': 'application/json',
+  'origin': 'https://app.unlimitedai.chat',
+  'priority': 'u=1, i',
+  'referer': 'https://app.unlimitedai.chat/chat/3d4224da-551e-4d6b-a136-816878a9aafd',
+  'sec-ch-ua': '"Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
+  'x-api-token': api_token,
+  'Cookie': '_ga=GA1.1.843752196.1744899840; sidebar:state=true; _ga_BB7FNJV4KQ=GS1.1.1745982008.8.1.1745984335.0.0.0'
+}
 
 try:
     lines = response.text.strip().split('\n')
@@ -184,7 +224,7 @@ def chat_with_bot():
         
         chat_url = "https://app.unlimitedai.chat/api/chat"
         
-        response = requests.post(chat_url, headers=headers, data=payload, stream=True)
+        response = requests.post(chat_url, headers=headers2, data=payload, stream=True)
 
         full_response = ""
         accumulated_response = ""
@@ -223,22 +263,22 @@ def chat_with_bot():
                     {
                         "type": "step-start"
                     },
-                    {
-                        "type": "reasoning",
-                        "reasoning": bot_reasoning,
-                        "details": [
-                            {
-                                "type": "text",
-                                "text": bot_reasoning
-                            }
-                        ]
-                    },
+                    # {
+                    #     "type": "reasoning",
+                    #     "reasoning": bot_reasoning,
+                    #     "details": [
+                    #         {
+                    #             "type": "text",
+                    #             "text": bot_reasoning
+                    #         }
+                    #     ]
+                    # },
                     {
                         "type": "text",
                         "text": bot_message_text
                     }
                 ],
-                "reasoning": bot_reasoning,
+                # "reasoning": bot_reasoning,
                 "revisionId": str(uuid.uuid4())
             }
             
@@ -254,4 +294,3 @@ def chat_with_bot():
 
 print("\n欢迎使用 UnlimitedAI.Chat！开始对话吧！")
 chat_with_bot()
-
