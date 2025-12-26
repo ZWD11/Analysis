@@ -29,6 +29,9 @@
 ### 注：讯飞星火有url跳转，打开控制台会跳转到about:blank,先在url后面加个bug=s，如 https://xinghuo.xfyun.cn/desk?bug=s ，这样就不会跳转正常打开获取cookie
 ![alt text](image-5.png)
 
+## MiMo cookie 获取
+![alt text](image-1.png)
+
 ## 另QQ音乐获取cookie及刷新cookie算法和网易云获取cookie算法：
 
 https://github.com/ZWD11/qqmusic-wyy-qrlogin-cookie
