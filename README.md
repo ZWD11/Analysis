@@ -32,6 +32,11 @@
 ## MiMo cookie 获取
 ![alt text](image-1.png)
 
+## business Gemini cookie、csesidx、config_id获取
+cookie获取不多赘述，进入界面都能找，csesidx与config_id在界面url中，如图：
+![alt text](image-2.png)
+第一个红框中（cid后面）的值就是config_id，第二个红框（csesidx后面）就是csesidx，都是字符串
+
 ## 另QQ音乐获取cookie及刷新cookie算法和网易云获取cookie算法：
 
 https://github.com/ZWD11/qqmusic-wyy-qrlogin-cookie
